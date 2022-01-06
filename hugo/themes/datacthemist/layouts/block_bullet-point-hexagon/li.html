@@ -14,8 +14,8 @@
           <img src="{{ .image }}" alt="{{ $key }}">
         </div>
         <div class="col-9">
-          <h3>{{ $key }}</h3>
-          <p>{{ .text }}</p>
+          <h3>{{ $key | safeHTML}}</h3>
+          <p>{{ .text | safeHTML}}</p>
         </div>
         {{ end }}
         {{ if modBool $index 2 }}
